@@ -1,0 +1,31 @@
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <title>Punchbag Game</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link rel="stylesheet" href="punchbag.css">
+        <script src="punchbag.js"></script>
+    </head>
+    <body>
+        <div id="vue-app">
+            <!--Bag Image-->
+            <div id="bag" v-bind:class="{burst: ended}">
+
+            </div>
+
+            <!--Bag Health-->
+            <div id="bag-health">
+                <div v-bind:style="{width: health + '%'}">
+
+                </div>
+            </div>
+
+            <!--Game Controls-->
+            <div id="controls">
+                <button v-on:click="restart">Restart</button>
+                <button v-show="!ended" v-on:click="punch">Punch</button>
+            </div>
+        </div>
+        <script src="punchbag.js"></script>
+    </body>
+</html>
